@@ -111,17 +111,17 @@ public class LineCharts extends ApplicationFrame{
     }
 
 
-    public static void main(String[] args) throws IOException {
-        String xName = "x axixs";
-        String yName = "y axixs";
-        String graphName = "graph";
-        long[][] datagroups = new long[6][5];
-        datagroups[0] = new long[]{1, 2, 3, 4, 5};
-        datagroups[1] = new long[]{5, 4, 9, 10,3};
-        datagroups[2] = new long[]{2,6,7,11,5};
-        datagroups[3] = new long[]{19,15,22,17,4};
-        datagroups[4] = new long[]{4,9,11,15,20};
-        datagroups[5] = new long[]{10, 19, 4,7, 18};
-        run(xName, yName, graphName, datagroups);
-    }
+    // public static void main(String[] args) throws IOException {
+    //     String xName = "x axixs";
+    //     String yName = "y axixs";
+    //     String graphName = "graph";
+    //     long[][] datagroups = new long[6][5];
+    //     datagroups[0] = new long[]{1, 2, 3, 4, 5};
+    //     datagroups[1] = new long[]{5, 4, 9, 10,3};
+    //     datagroups[2] = new long[]{2,6,7,11,5};
+    //     datagroups[3] = new long[]{19,15,22,17,4};
+    //     datagroups[4] = new long[]{4,9,11,15,20};
+    //     datagroups[5] = new long[]{10, 19, 4,7, 18};
+    //     run(xName, yName, graphName, datagroups);
+    // }
 }
