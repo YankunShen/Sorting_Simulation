@@ -108,26 +108,26 @@ public class Test {
         for (int i = 1; i < 6; i++) {
             datagroups[i] = methodData[i-1][2];
         }
-        LineCharts.run("data size", "runtime", "datasize-runtime-age", datagroups);
+        LineCharts.run("data size", "runtime", "datasize-runtime-gaussian", datagroups);
         for (int i = 1; i < 6; i++) {
             datagroups[i] = methodData[i-1][3];
         }
-        LineCharts.run("data size", "memory usage", "datasize-memusage-age", datagroups);
+        LineCharts.run("data size", "memory usage", "datasize-memusage-gaussian", datagroups);
         datagroups[0] = methodData[0][1];
         for (int i = 1; i < 6; i++) {
             datagroups[i] = methodData[i-1][2];
         }
-        LineCharts.run("sortedness", "runtime", "sortedness-runtime-age", datagroups);
+        LineCharts.run("sortedness", "runtime", "sortedness-runtime-gaussian", datagroups);
         for (int i = 1; i < 6; i++) {
             datagroups[i] = methodData[i-1][3];
         }
-        LineCharts.run("sortedness", "memory usage", "sortedness-memusage-age", datagroups);
+        LineCharts.run("sortedness", "memory usage", "sortedness-memusage-gaussian", datagroups);
 
     }
 
     public static void main(String[] args) throws IOException {
 
-        String filepath = "data/census_income_age.csv";
+        String filepath = "data/gaussian.csv";
         helper(filepath);
     }
 }

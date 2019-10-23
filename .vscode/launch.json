@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CodeLens (Launch) - DataGenerator",
+            "request": "launch",
+            "mainClass": "sorting.DataGenerator",
+            "projectName": "Sorting_Simulation_19b3bd0c"
+        },
+        {
+            "type": "java",
             "name": "CodeLens (Launch) - Test",
             "request": "launch",
             "mainClass": "sorting.Test",
