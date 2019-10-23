@@ -11,7 +11,7 @@ import java.util.List;
 
 
 
-public class InsertSort {
+public class Sorting {
 
     public void insertSort(int[] nums){
         int n = nums.length;
@@ -29,7 +29,7 @@ public class InsertSort {
         int n = nums.length;
         for(int i=0; i<n-1; i++){
             for(int j=0; j<n-i-1; j++){
-                if(num[j] > nums[j+1]){
+                if(nums[j] > nums[j+1]){
                     int tmp = nums[j];
                     nums[j] = nums[j+1];
                     nums[j+1] = tmp;
@@ -38,7 +38,7 @@ public class InsertSort {
         }
     }
 
-    public void quickSort(int [] nums, int left, int right){
+    public void quickSort(int[] nums, int left, int right){
         int n = nums.length;
         if(left < right){
             int pos = partition(left, right, nums);
@@ -61,24 +61,8 @@ public class InsertSort {
         return left;
     }
 
-    private List<Integer>  readFromCSV(String filepath) throws FileNotFoundException {
-        List<Integer> nums = new ArrayList<>();
-        try (BufferedReader br = new BufferedReader(new FileReader(filepath))){
-            String line;
-            while((line = br.readLine()) != null){
-                nums.add(Integer.parseInt(line));
-            }
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        return nums;
-    }
-    public static void main(String[] args)
-    {
-        List<Integer> list = new ArrayList<>();
-        String filepath = ""
-        list = readFromCSV(filepath);
-    }
+
+
 
 }
 
