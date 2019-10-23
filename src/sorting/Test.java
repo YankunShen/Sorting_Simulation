@@ -34,8 +34,10 @@ public class Test {
         String filepath = "Beijing_PM2.5_data_2010.1.1-2014.12.31.csv";
         Sorting sorting = new Sorting();
         int[] nums = readFromCSV(filepath);
+        long startTime = System.nanoTime();
         sorting.insertSort(nums);
-        
+        long endTime = System.nanoTime();
+        System.out.println(endTime - startTime);
         System.out.println(Arrays.toString(nums));
     }
 }

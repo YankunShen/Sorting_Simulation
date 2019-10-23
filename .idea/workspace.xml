@@ -2,11 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="32480e33-6cf7-42cd-8fa8-8ffc0db6a8d6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Beijing_PM2.5_data_2010.1.1-2014.12.31.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/sorting/Test.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sorting/InsertSort.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sorting/Sorting.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/sorting_techniques/sorting/Test.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/sorting_techniques/sorting/Test.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sorting/Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sorting/Test.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -84,7 +82,7 @@
       <updated>1571720873234</updated>
       <workItem from="1571720877206" duration="6932000" />
       <workItem from="1571784593533" duration="1235000" />
-      <workItem from="1571789073858" duration="2356000" />
+      <workItem from="1571789073858" duration="2816000" />
     </task>
     <servers />
   </component>
