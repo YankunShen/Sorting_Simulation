@@ -3,6 +3,7 @@ package sorting;
 import javax.swing.JPanel;
 import org.jfree.chart.ChartFactory;
 import org.jfree.chart.ChartPanel;
+import org.jfree.chart.ChartUtilities;
 import org.jfree.chart.JFreeChart;
 import org.jfree.chart.axis.NumberAxis;
 import org.jfree.chart.plot.CategoryPlot;
@@ -15,35 +16,39 @@ import org.jfree.data.xy.XYSeriesCollection;
 import org.jfree.ui.ApplicationFrame;
 import org.jfree.ui.RefineryUtilities;
 
+import java.io.File;
+import java.io.IOException;
 import java.util.Map;
 import java.util.TreeMap;
 
 public class LineCharts extends ApplicationFrame{
-    private String xName, yName;
-    private int[][] datagroups;
-    public LineCharts(String s, String xName, String yName, int[][] datagroups) {
+    private String xName, yName, graphName;
+    private long[][] datagroups;
+    public LineCharts(String s, String xName, String yName, String graphName, long[][] datagroups) throws IOException {
         super(s);
         this.xName = xName;
         this.yName = yName;
+        this.graphName = graphName;
         this.datagroups = datagroups;
-        setContentPane(createDemoLine(xName, yName, datagroups));
+        setContentPane(createDemoLine(xName, yName, graphName, datagroups));
     }
-    public static void run(String xName, String yName, int[][] datagroups) {
-        LineCharts fjc = new LineCharts("Graph", xName, yName, datagroups);
+    public static void run(String xName, String yName, String graphName, long[][] datagroups) throws IOException {
+        LineCharts fjc = new LineCharts("Graph", xName, yName,graphName, datagroups);
         fjc.pack();
         RefineryUtilities.centerFrameOnScreen(fjc);
         fjc.setVisible(true);
     }
     //Generate the panel for the graph
-    public static JPanel createDemoLine(String xName, String yName, int[][] datagroups) {
-        JFreeChart jfreechart = createChart(createDataset(datagroups), xName, yName);
+    public static JPanel createDemoLine(String xName, String yName, String graphName, long[][] datagroups) throws IOException {
+        JFreeChart jfreechart = createChart(createDataset(datagroups), xName, yName, graphName);
+        ChartUtilities.saveChartAsJPEG(new File(graphName + ".jpeg"), jfreechart, 700, 600);
         return new ChartPanel(jfreechart);
     }
 
     // Generate JFreeChart
-    public static JFreeChart createChart(XYDataset linedataset, String xName, String yName) {
+    public static JFreeChart createChart(XYDataset linedataset, String xName, String yName, String graphName) {
         //定义图表对象
-        JFreeChart chart = ChartFactory.createXYLineChart("Graph", // chart title
+        JFreeChart chart = ChartFactory.createXYLineChart(graphName, // chart title
                 xName, // domain axis label
                 yName, // range axis label
                 linedataset, // data
@@ -62,7 +67,7 @@ public class LineCharts extends ApplicationFrame{
         return chart;
     }
     //Generate dataset
-    public static XYDataset createDataset(int[][] datagroups) {
+    public static XYDataset createDataset(long[][] datagroups) {
 
         XYSeriesCollection dataset = new XYSeriesCollection();
         XYSeries series1 = new XYSeries("Insert Sort");
@@ -105,16 +110,18 @@ public class LineCharts extends ApplicationFrame{
         return dataset;
     }
 
-    public static void main(String[] args){
+
+    public static void main(String[] args) throws IOException {
         String xName = "x axixs";
         String yName = "y axixs";
-        int[][] datagroups = new int[6][5];
-        datagroups[0] = new int[]{1, 2, 3, 4, 5};
-        datagroups[1] = new int[]{5, 4, 9, 10,3};
-        datagroups[2] = new int[]{2,6,7,11,5};
-        datagroups[3] = new int[]{19,15,22,17,4};
-        datagroups[4] = new int[]{4,9,11,15,20};
-        datagroups[5] = new int[]{10, 19, 4,7, 18};
-        run(xName, yName, datagroups);
+        String graphName = "graph";
+        long[][] datagroups = new long[6][5];
+        datagroups[0] = new long[]{1, 2, 3, 4, 5};
+        datagroups[1] = new long[]{5, 4, 9, 10,3};
+        datagroups[2] = new long[]{2,6,7,11,5};
+        datagroups[3] = new long[]{19,15,22,17,4};
+        datagroups[4] = new long[]{4,9,11,15,20};
+        datagroups[5] = new long[]{10, 19, 4,7, 18};
+        run(xName, yName, graphName, datagroups);
     }
 }
