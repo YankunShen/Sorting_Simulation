@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="32480e33-6cf7-42cd-8fa8-8ffc0db6a8d6" name="Default Changelist" comment="" />
+    <list default="true" id="32480e33-6cf7-42cd-8fa8-8ffc0db6a8d6" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sorting_techniques.iml" beforeDir="false" afterPath="$PROJECT_DIR$/sorting_techniques.iml" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,7 +40,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="findjar.last.used.dir" value="$PROJECT_DIR$" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Downloads/jcommon-1.0.8.jar!/" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/jfreechart-1.0.19.jar!/" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -109,6 +112,8 @@
       <workItem from="1571789073858" duration="2816000" />
       <workItem from="1571811993453" duration="82000" />
       <workItem from="1571812715745" duration="1530000" />
+      <workItem from="1571814687987" duration="35000" />
+      <workItem from="1571814726191" duration="63000" />
     </task>
     <servers />
   </component>
